@@ -123,10 +123,11 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
 .reset-btn{font-family:"Josefin Sans",sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--smoke);background:none;border:1px solid var(--border);padding:.5rem 1rem;cursor:pointer;margin-top:1rem;transition:all .2s;display:block;width:100%;}.reset-btn:hover{border-color:var(--rust);color:var(--rust);}
 .side-box p{font-size:.92rem;line-height:1.85;color:var(--coal);}
 
-/* WORKS CITED */
-.works-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
-.works-entry{background:var(--cream);padding:1.5rem 1.75rem;font-size:.88rem;line-height:1.75;color:var(--coal);transition:background .25s;}.works-entry:hover{background:#fff;}
-.works-entry em{font-style:italic;}.works-entry a{color:var(--rust);word-break:break-all;}
+/* WORKS CITED - MLA */
+.mla-works-cited{background:#fff;padding:2.5rem 3rem;border:1px solid #ddd;max-width:860px;}
+.mla-entry{font-family:"Times New Roman",Times,serif;font-size:12pt;line-height:2;color:#000;margin:0;padding-left:2em;text-indent:-2em;}
+.mla-entry em{font-style:italic;}
+.mla-entry a{color:#000;text-decoration:underline;word-break:break-all;}
 
 /* FOOTER */
 footer{background:var(--dark);color:rgba(250,246,239,.4);text-align:center;padding:2rem;font-family:"Josefin Sans",sans-serif;font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;border-top:3px solid var(--rust);}
@@ -161,6 +162,7 @@ footer span{color:var(--gold);opacity:.8;}
   <button class="tab-btn" onclick="showTab('facts',this)">Fact Sheet</button>
   <button class="tab-btn" onclick="showTab('faq',this)">FAQ</button>
   <button class="tab-btn" onclick="showTab('classroom',this)">Classroom</button>
+  <button class="tab-btn" onclick="showTab('video',this)">Documentary</button>
   <button class="tab-btn" onclick="showTab('works',this)">Works Cited</button>
 </nav>
 
@@ -278,16 +280,15 @@ footer span{color:var(--gold);opacity:.8;}
       </div>
       <div class="fact-col">
         <div class="fact-col-head">Key Statistics</div>
-        <div class="fact-entry"><span class="bullet">&#9658;</span><div>The Union had about <strong>22,000 miles</strong> of railroad track, while the Confederacy had only about <strong>9,000 miles</strong>.</div></div>
-        <div class="fact-entry"><span class="bullet">&#9658;</span><div>In 1861, Northern factories produced <strong>96%</strong> of the locomotives in the United States, leaving the South with barely any ability to replace broken or captured trains.</div></div>
-        <div class="fact-entry"><span class="bullet">&#9658;</span><div>The North had a standardized rail gauge of <strong>4 feet, 8.5 inches</strong>, allowing trains to run anywhere across the Union.</div></div>
-        <div class="fact-entry"><span class="bullet">&#9658;</span><div>In contrast, the South used <strong>over a dozen different rail gauges</strong>, making it hard to transport goods long distances and often forcing cargo transfers.</div></div>
+        <div class="fact-entry"><span class="bullet">&#9658;</span><div>The Union had about <strong>22,000 miles</strong> of railroad track, while the Confederacy had only about <strong>9,000 miles</strong> (Burns "Civil War Railroads: Map and Facts (North vs South)").</div></div>
+        <div class="fact-entry"><span class="bullet">&#9658;</span><div>In 1861, Northern factories produced <strong>96%</strong> of the locomotives in the United States, leaving the South with barely any ability to replace broken or captured trains (Arrington "Industry and Economy during the Civil War").</div></div>
+        <div class="fact-entry"><span class="bullet">&#9658;</span><div>The North had a standardized rail gauge of <strong>4 feet, 8.5 inches</strong> (Rogers "Railroad Facts… Construction, Safety, and More"), allowing trains to run anywhere across the Union. In contrast, the South used <strong>over a dozen different rail gauges</strong>, making it hard to transport goods long distances and often forcing cargo transfers.</div></div>
       </div>
       <div class="fact-col">
-        <div class="fact-col-head">Key Logistics &amp; Turning Points</div>
+        <div class="fact-col-head">Key PEDLIGS</div>
         <div class="fact-entry"><span class="bullet">&#9658;</span><div><strong>Baltimore and Ohio (B&amp;O) Railroad:</strong> The main Northern railroad line and the primary supply route between Washington, D.C., and the Western parts of the war.</div></div>
         <div class="fact-entry"><span class="bullet">&#9658;</span><div><strong>The Great Locomotive Chase (1862):</strong> A Union military raid in Georgia where Union spies hijacked The General, a Confederate locomotive, to destroy important Western &amp; Atlantic railroad tracks.</div></div>
-        <div class="fact-entry"><span class="bullet">&#9658;</span><div><strong>Battle of Chickamauga Rail Deployment (1863):</strong> The Union moved 22,000 troops over 1,200 miles using railway systems in only 11 days to reinforce surrounded forces at Chattanooga, Tennessee. It was the quickest army mobilization of the war.</div></div>
+        <div class="fact-entry"><span class="bullet">&#9658;</span><div><strong>Battle of Chickamauga Rail Deployment (1863):</strong> The Union moved 22,000 troops over 1,200 miles using railway systems in only 11 days to reinforce surrounded forces at Chattanooga, Tennessee ("Hamilton County and City of Chattanooga, TN"). It was the quickest army mobilization of the war.</div></div>
         <div class="fact-entry"><span class="bullet">&#9658;</span><div><strong>United States Military Railroad (USMRR):</strong> Created by the Union, it was the largest railroad system in the world at the time, connecting thousands of miles of captured and built tracks.</div></div>
         <div class="fact-entry"><span class="bullet">&#9658;</span><div><strong>Sherman&#39;s Bowties:</strong> The nickname of Confederate rail lines that Union soldiers heated over fires and bent around trees as a total war tactic, making the iron fully unrepairable and forcing Southern workers to rebuild broken tracks from scratch.</div></div>
         <div class="fact-entry"><span class="bullet">&#9658;</span><div><strong>Confederate Iron Shortage:</strong> Without sufficient iron factories, such as the Tredegar Iron Works, the South frequently had to rip up minor rail lines to repair their more important, mainline tracks.</div></div>
@@ -378,22 +379,35 @@ footer span{color:var(--gold);opacity:.8;}
   </div>
 </div>
 
+<!-- VIDEO -->
+<div class="tab-panel" id="panel-video">
+  <div class="panel-inner">
+    <div class="reveal">
+      <div class="sec-label">Tab VII</div>
+      <h2 class="sec-title">Exhibit <em>Video</em></h2>
+    </div>
+    <div class="reveal d1" style="max-width:860px;">
+      <iframe width="100%" height="500" src="https://www.youtube.com/embed/yFzP6tvZWOo" title="Railroads in the Civil War" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display:block;border:1px solid var(--border);"></iframe>
+    </div>
+  </div>
+</div>
+
 <!-- WORKS CITED -->
 <div class="tab-panel" id="panel-works">
   <div class="panel-inner">
     <div class="reveal">
-      <div class="sec-label">Works Cited</div>
-      <h2 class="sec-title">Wartime <em>Bibliography</em></h2>
+      <div class="sec-label">Tab VIII</div>
+      <h2 class="sec-title" style="font-family:'Times New Roman',Times,serif;text-align:center;color:#000;font-size:1.5rem;font-weight:700;font-style:normal;">Works Cited</h2>
     </div>
-    <div class="works-grid reveal">
-      <div class="works-entry">&#34;10 Facts: Railroads in the Civil War.&#34; <em>American Battlefield Trust</em>, 22 Aug. 2025, <a href="https://www.battlefields.org/learn/articles/10-facts-railroads-civil-war" target="_blank">www.battlefields.org/learn/articles/10-facts-railroads-civil-war</a>. Accessed 23 May 2026.</div>
-      <div class="works-entry">American Battlefield Trust. &#34;Railroads of the Confederacy.&#34; <em>American Battlefield Trust</em>, 23 July 2018, <a href="https://www.battlefields.org/learn/articles/railroads-confederacy" target="_blank">www.battlefields.org/learn/articles/railroads-confederacy</a>. Accessed 24 May 2026.</div>
-      <div class="works-entry">Arrington, Benjamin. &#34;Industry and Economy during the Civil War.&#34; <em>National Park Service</em>, 23 Aug. 2017, <a href="https://www.nps.gov/articles/industry-and-economy-during-the-civil-war.htm" target="_blank">www.nps.gov/articles/industry-and-economy-during-the-civil-war.htm</a>. Accessed 24 May 2026.</div>
-      <div class="works-entry">Burns, Adam. &#34;Railroads in the Civil War.&#34; <em>American-Rails.com</em>, 27 Oct. 2024, <a href="https://www.american-rails.com/civil.html" target="_blank">www.american-rails.com/civil.html</a>. Accessed 23 May 2026.</div>
-      <div class="works-entry">Klein, Lloyd. &#34;The Critical Role of Railroads in Influencing Military Strategy in the Civil War.&#34; <em>Emerging Civil War</em>, 15 Feb. 2022, <a href="https://emergingcivilwar.com/2022/02/15/the-critical-role-of-railroads-in-influencing-military-strategy-in-the-civil-war/" target="_blank">emergingcivilwar.com/2022/02/15/the-critical-role-of-railroads-in-influencing-military-strategy-in-the-civil-war/</a>. Accessed 23 May 2026.</div>
-      <div class="works-entry">McIntire, Tracey. &#34;Getting on the Right Track--the Evolution of Hospital Trains.&#34; <em>National Museum of Civil War Medicine</em>, 31 Jan. 2023, <a href="https://www.civilwarmed.org/hospital-trains/" target="_blank">www.civilwarmed.org/hospital-trains/</a>. Accessed 24 May 2026.</div>
-      <div class="works-entry">National Archives. &#34;Pacific Railway Act (1862).&#34; <em>National Archives</em>, 10 Aug. 2021, <a href="https://www.archives.gov/milestone-documents/pacific-railway-act" target="_blank">www.archives.gov/milestone-documents/pacific-railway-act</a>. Accessed 23 May 2026.</div>
-      <div class="works-entry">Smithsonian American Art Museum. <em>How the Railroad Won the War.</em> 2015.</div>
+    <div class="mla-works-cited reveal">
+      <p class="mla-entry">&#34;10 Facts: Railroads in the Civil War.&#34; <em>American Battlefield Trust</em>, 22 Aug. 2025, <a href="https://www.battlefields.org/learn/articles/10-facts-railroads-civil-war" target="_blank">www.battlefields.org/learn/articles/10-facts-railroads-civil-war</a>. Accessed 23 May 2026.</p>
+      <p class="mla-entry">American Battlefield Trust. &#34;Railroads of the Confederacy.&#34; <em>American Battlefield Trust</em>, 23 July 2018, <a href="https://www.battlefields.org/learn/articles/railroads-confederacy" target="_blank">www.battlefields.org/learn/articles/railroads-confederacy</a>. Accessed 24 May 2026.</p>
+      <p class="mla-entry">Arrington, Benjamin. &#34;Industry and Economy during the Civil War.&#34; <em>National Park Service</em>, National Park Service, 23 Aug. 2017, <a href="https://www.nps.gov/articles/industry-and-economy-during-the-civil-war.htm" target="_blank">www.nps.gov/articles/industry-and-economy-during-the-civil-war.htm</a>. Accessed 24 May 2026.</p>
+      <p class="mla-entry">Burns, Adam. &#34;Railroads in the Civil War.&#34; <em>American-Rails.com</em>, 27 Oct. 2024, <a href="https://www.american-rails.com/civil.html" target="_blank">www.american-rails.com/civil.html</a>. Accessed 23 May 2026.</p>
+      <p class="mla-entry">Klein, Lloyd. &#34;The Critical Role of Railroads in Influencing Military Strategy in the Civil War.&#34; <em>Emerging Civil War</em>, 15 Feb. 2022, emergingcivilwar.com/2022/02/15/the-critical-role-of-railroads-in-influencing-military-strategy-in-the-civil-war/. Accessed 23 May 2026.</p>
+      <p class="mla-entry">McIntire, Tracey. &#34;Getting on the Right Track--the Evolution of Hospital Trains.&#34; <em>National Museum of Civil War Medicine</em>, 31 Jan. 2023, <a href="https://www.civilwarmed.org/hospital-trains/" target="_blank">www.civilwarmed.org/hospital-trains/</a>. Accessed 24 May 2026.</p>
+      <p class="mla-entry">National Archives. &#34;Pacific Railway Act (1862).&#34; <em>National Archives</em>, 10 Aug. 2021, <a href="https://www.archives.gov/milestone-documents/pacific-railway-act" target="_blank">www.archives.gov/milestone-documents/pacific-railway-act</a>. Accessed 23 May 2026.</p>
+      <p class="mla-entry">Smithsonian American Art Museum. <em>How the Railroad Won the War.</em> 2015.</p>
     </div>
   </div>
 </div>
